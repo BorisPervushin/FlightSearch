@@ -3,7 +3,7 @@ class FlightData:
     def __init__(self, json_data):
         self.data = json_data
         self.departure_IATA_code = self.data['data'][0]['flyFrom']  # the departure airport IATA code
-        self.destination_IATA_code = self.data['data'][0]['flyTo']  # destination airport IATA code
+        self.destination_IATA_code = self.data['data'][0]['cityCodeTo']  # destination airport IATA code
 
         self.departure_city = self.data['data'][0]['cityFrom']  # departure city,
         self.destination_city = self.data['data'][0]['cityTo']  # destination city,
