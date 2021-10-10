@@ -24,11 +24,7 @@ class SheetyManager:
             for i, old_flight_data in enumerate(current_table['prices']):
                 if new_flight_data["destination_city"] == old_flight_data['city']:
                     if new_flight_data["flight_price"] < old_flight_data['lowestPrice']:
-                        print(old_flight_data['city'])
                         self.cities_list_changed_price.append(old_flight_data['city'])
-                        print(self.cities_list_changed_price)
-                        exit()
-
                         put_url = f'https://api.sheety.co/ca514d056d0e774572f3f45f1d4f1900/flightDeals/prices/{old_flight_data["id"]}'
                         body = {
                             'price': {
